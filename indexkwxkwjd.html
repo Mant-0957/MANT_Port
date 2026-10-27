@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mant Sherasiya | Data Scientist & Machine Learning Engineer</title>
+  
+  <meta name="description" content="Portfolio of Mant Sherasiya - Aspiring Data Scientist, Machine Learning Engineer, and BI Analyst specializing in Predictive Modeling, Unsupervised Clustering, Power BI Dashboards, and Generative AI.">
+  <meta name="keywords" content="Mant Sherasiya, Data Scientist, Machine Learning Engineer, AI, Power BI, Python, Scikit-learn, SQL, Data Analysis, Portfolio, Ahmedabad">
+  <meta name="author" content="Mant Sherasiya">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mant Sherasiya | Data Scientist & Machine Learning Engineer">
+  <meta property="og:description" content="Explore end-to-end Machine Learning workflows, RFM Customer Clustering, Power BI Executive Dashboards, and Macroeconomic data analysis.">
+  <meta property="og:image" content="assets/hero_ai_data.jpg">
+  <meta property="og:url" content="https://github.com/Mant-0957">
+
+  <!-- Color scheme declaration & anti-FOUC script as per Modern Web Guidance -->
+  <meta name="color-scheme" content="light dark">
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem("color-scheme");
+        if (saved === "light" || saved === "dark") {
+          document.querySelector('meta[name="color-scheme"]').content = saved;
+          document.documentElement.setAttribute('data-theme', saved);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'system');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit (Headings), Plus Jakarta Sans (Body), JetBrains Mono (Tech/Badges) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+  <!-- Ambient background lighting canvas / glow -->
+  <canvas id="neural-bg" class="neural-bg" aria-hidden="true"></canvas>
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Main Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Mant Sherasiya Homepage">
+        <span class="logo-symbol">&lt;MS /&gt;</span>
+        <span class="logo-text">Mant<span class="accent-text">.ai</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#playground" class="nav-link">ML Playground</a></li>
+          <li><a href="#journey" class="nav-link">Education</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action items: Status, Theme Toggle, Hire CTA, Mobile Hamburger -->
+      <div class="nav-actions">
+        <div class="status-indicator" title="Actively Seeking Opportunities">
+          <span class="status-dot"></span>
+          <span class="status-text">Available</span>
+        </div>
+
+        <!-- 3-State Theme Switcher (System / Light / Dark) -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch color theme" title="Toggle Light / Dark / System theme">
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's Talk</a>
+
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Open mobile menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#playground" class="mobile-nav-link">ML Playground</a></li>
+        <li><a href="#journey" class="mobile-nav-link">Education & Activities</a></li>
+        <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="#contact" class="btn btn-primary btn-block">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill hero-badge">
+            <span class="badge-spark">✨</span> Data Science • Machine Learning • Business Intelligence
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Mant Sherasiya</span>
+            <br>
+            <span class="hero-subtext">Building Intelligent Insights with <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span></span>
+          </h1>
+
+          <p class="hero-description">
+            B.Tech Computer Science student and aspiring Data Scientist from Ahmedabad, India. 
+            Passionate about transforming messy real-world datasets into actionable business intelligence through 
+            <strong>Predictive Modeling</strong>, <strong>Unsupervised Clustering</strong>, <strong>Power BI Dashboards</strong>, and emerging <strong>GenAI & RAG</strong> pipelines.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#resume" class="btn btn-glass btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Explore Resume</span>
+            </a>
+            <a href="https://github.com/Mant-0957" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-glass" title="Visit GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+
+          <!-- Live GitHub & Metric highlights -->
+          <div class="hero-stats-row">
+            <div class="stat-card">
+              <span class="stat-number" data-count="46">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">GitHub Repos</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="12">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Data Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Power BI Dashboards</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="94">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Academic Distinctions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Tech Terminal & ML Architecture Card (Photo removed) -->
+        <div class="hero-visual">
+          <div class="glass-card hero-3d-card terminal-card" id="heroCard">
+            <div class="card-glow-reflection"></div>
+            
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="term-dot dot-red"></span>
+                <span class="term-dot dot-yellow"></span>
+                <span class="term-dot dot-green"></span>
+              </div>
+              <span class="terminal-filename">mant_ml_pipeline.py</span>
+              <span class="terminal-status-tag">ACTIVE INFERENCE</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-code">
+                <div class="code-line"><span class="code-comment"># Retail Customer Segmentation Engine</span></div>
+                <div class="code-line"><span class="code-keyword">import</span> pandas <span class="code-keyword">as</span> pd</div>
+                <div class="code-line"><span class="code-keyword">from</span> sklearn.cluster <span class="code-keyword">import</span> KMeans</div>
+                <div class="code-line"><span class="code-keyword">from</span> sklearn.metrics <span class="code-keyword">import</span> silhouette_score</div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line"><span class="code-comment"># Step 1: Feature Extraction (RFM)</span></div>
+                <div class="code-line">rfm = calculate_rfm(transactions)</div>
+                <div class="code-line">scaled = RobustScaler().fit_transform(rfm)</div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line"><span class="code-comment"># Step 2: Unsupervised Model Fitting</span></div>
+                <div class="code-line">model = KMeans(n_clusters=<span class="code-num">4</span>, random_state=<span class="code-num">42</span>)</div>
+                <div class="code-line">labels = model.fit_predict(scaled)</div>
+                <div class="code-line">&nbsp;</div>
+                <div class="code-line output-line"><span class="terminal-arrow">➔</span> <span class="text-glow-cyan">Silhouette Score: 0.421 (Optimal K=4)</span></div>
+                <div class="code-line output-line"><span class="terminal-arrow">➔</span> <span class="text-glow-purple">Champions Cohort: 15% generating 58% Rev</span></div>
+                <div class="code-line output-line"><span class="terminal-arrow">➔</span> <span class="text-glow-green">Pipeline Status: 100% Validated</span></div>
+              </div>
+            </div>
+
+            <!-- Floating mini telemetry badges -->
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon-wrap">🤖</div>
+              <div class="badge-details">
+                <span class="badge-meta">Focus Area</span>
+                <span class="badge-value">Machine Learning & RAG</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon-wrap">📈</div>
+              <div class="badge-details">
+                <span class="badge-meta">BI Specialization</span>
+                <span class="badge-value">Power BI & SQL Analytics</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-center-right">
+              <div class="badge-icon-wrap">🐍</div>
+              <div class="badge-details">
+                <span class="badge-meta">Core Stack</span>
+                <span class="badge-value">Python, Pandas, Scikit-learn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Bridging Raw Data and <span class="gradient-text">Strategic Decisions</span></h2>
+          <p class="section-subtitle">Dedicated to high-impact data science, mathematical modeling, and interactive business analytics.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card about-bio-card">
+            <h3 class="about-card-title">Who I Am</h3>
+            <p>
+              I am a B.Tech Computer Science and Engineering student at <strong>Gandhinagar University</strong> (2025–2029) with a deep-rooted obsession with data. 
+              My journey began with uncovering patterns in numbers, which evolved into training machine learning pipelines, building complex clustering algorithms, and presenting insights through executive Power BI dashboards.
+            </p>
+            <p>
+              Whether it's segmenting hundreds of thousands of retail transactions using <strong>RFM and unsupervised clustering</strong>, performing econometric trend analysis on India's macroeconomic indicators, or constructing <strong>RAG and LLM applications</strong>, I thrive at the crossroads of code, mathematics, and business strategy.
+            </p>
+            <div class="about-location-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Based in Ahmedabad, Gujarat, India</span>
+            </div>
+          </div>
+
+          <div class="about-highlights-grid">
+            <div class="glass-card highlight-box">
+              <div class="highlight-icon">🎯</div>
+              <h4>End-to-End ML Pipelines</h4>
+              <p>From EDA, missing value imputation, and feature engineering to model tuning, cross-validation, and deployment.</p>
+            </div>
+            <div class="glass-card highlight-box">
+              <div class="highlight-icon">📊</div>
+              <h4>Executive Dashboards</h4>
+              <p>Proficient in Power BI, DAX formulas, interactive KPI cards, drill-through reports, and business storytelling.</p>
+            </div>
+            <div class="glass-card highlight-box">
+              <div class="highlight-icon">📐</div>
+              <h4>Mathematical Foundation</h4>
+              <p>Grounded in Linear Algebra, Multivariable Calculus, Probability, and Inferential Statistics for algorithmic depth.</p>
+            </div>
+            <div class="glass-card highlight-box">
+              <div class="highlight-icon">🧠</div>
+              <h4>Emerging GenAI & RAG</h4>
+              <p>Actively experimenting with Large Language Models, embeddings, vector databases, and Retrieval-Augmented Generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Tools, Technologies & <span class="gradient-text">Domain Knowledge</span></h2>
+          <p class="section-subtitle">Structured proficiencies based on hands-on project implementations and production workflows.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Machine Learning & AI -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">🤖</div>
+              <div>
+                <h3 class="skill-group-title">Machine Learning & AI</h3>
+                <span class="skill-group-meta">Predictive Modeling & Intelligence</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Scikit-learn</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Supervised Learning</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Unsupervised Clustering</li>
+              <li class="skill-pill"><span class="pill-dot"></span>K-Means</li>
+              <li class="skill-pill"><span class="pill-dot"></span>DBSCAN</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Agglomerative Clustering</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Generative AI</li>
+              <li class="skill-pill"><span class="pill-dot"></span>LLMs & Prompt Tuning</li>
+              <li class="skill-pill"><span class="pill-dot"></span>RAG Architectures</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Model Evaluation & Metrics</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 2: Programming & Data Wrangling -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">💻</div>
+              <div>
+                <h3 class="skill-group-title">Programming & Data</h3>
+                <span class="skill-group-meta">Core Engineering & Manipulation</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Python</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>SQL (Queries, Joins, Aggregations)</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Pandas</li>
+              <li class="skill-pill"><span class="pill-dot"></span>NumPy</li>
+              <li class="skill-pill"><span class="pill-dot"></span>C++</li>
+              <li class="skill-pill"><span class="pill-dot"></span>OOP (Object-Oriented Design)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Data Cleaning & Normalization</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Pickle & Model Persistence</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 3: BI, Analytics & Dashboards -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">📈</div>
+              <div>
+                <h3 class="skill-group-title">Data Analysis & BI</h3>
+                <span class="skill-group-meta">Visualization & Business Intelligence</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Power BI (DAX, Modeling)</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Exploratory Data Analysis (EDA)</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Advanced Excel (Pivot, Formulas)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Executive KPI Dashboards</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Matplotlib</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Seaborn</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Cohort & RFM Analysis</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Trend & Sales Forecasting</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 4: Mathematics & Statistics -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">📐</div>
+              <div>
+                <h3 class="skill-group-title">Mathematics & Stats</h3>
+                <span class="skill-group-meta">Theoretical & Quantitative Rigor</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Inferential Statistics</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Probability Theory</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Linear Algebra (Matrices, Eigendecomposition)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Calculus & Gradient Optimization</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Descriptive Analytics</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Hypothesis Testing & Distribution</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Quantitative Analysis</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 5: Tools & Development Environments -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">🛠️</div>
+              <div>
+                <h3 class="skill-group-title">Tools & Ecosystem</h3>
+                <span class="skill-group-meta">Version Control & Workspaces</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Git & GitHub</li>
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Jupyter Notebook</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Google Colab</li>
+              <li class="skill-pill"><span class="pill-dot"></span>VS Code</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Power BI Desktop</li>
+              <li class="skill-pill"><span class="pill-dot"></span>SQL Workbench</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card 6: Languages & Soft Skills -->
+          <div class="glass-card skill-group-card">
+            <div class="skill-group-header">
+              <div class="skill-group-icon">🤝</div>
+              <div>
+                <h3 class="skill-group-title">Leadership & Languages</h3>
+                <span class="skill-group-meta">Collaboration & Communication</span>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill highlight"><span class="pill-dot"></span>Leadership (Outreach Head)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Public Speaking & Presentation</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Cross-functional Collaboration</li>
+              <li class="skill-pill"><span class="pill-dot"></span>English (Fluent)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Hindi (Fluent)</li>
+              <li class="skill-pill"><span class="pill-dot"></span>Gujarati (Native)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Real-World <span class="gradient-text">Data Science Projects</span></h2>
+          <p class="section-subtitle">Deep dive into machine learning architectures, statistical analyses, and executive business dashboards.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning & AI</button>
+          <button class="filter-btn" data-filter="bi">Power BI & Dashboards</button>
+          <button class="filter-btn" data-filter="analytics">Data Analytics & SQL</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Project 1: Customer Segmentation -->
+          <article class="glass-card project-card" data-category="ml">
+            <div class="project-img-wrapper">
+              <img src="assets/project_clustering.jpg" alt="Customer Segmentation Dashboard" class="project-img" loading="lazy">
+              <div class="project-badge">Unsupervised ML</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Customer Segmentation using Unsupervised Learning</h3>
+              <p class="project-card-desc">
+                Built an end-to-end customer segmentation system on Online Retail II data utilizing Recency, Frequency, and Monetary (RFM) metrics. Benchmarked K-Means, Agglomerative Clustering, and DBSCAN using Silhouette scores.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">RFM Modeling</span>
+                <span class="tech-tag">K-Means</span>
+                <span class="tech-tag">DBSCAN</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="unsupervised">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/UnSuperVised_FINAL" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Supervised ML Predictive Modeling -->
+          <article class="glass-card project-card" data-category="ml">
+            <div class="project-img-wrapper">
+              <img src="assets/project_ml_sql.jpg" alt="Model Evaluation Predictive Dashboard" class="project-img" loading="lazy">
+              <div class="project-badge">Supervised ML</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Supervised Machine Learning Predictive Pipeline</h3>
+              <p class="project-card-desc">
+                Developed an end-to-end supervised machine learning pipeline covering outlier detection, feature encoding, hyperparameter tuning, ROC/AUC curve analysis, and model interpretability in a reproducible notebook.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Classification</span>
+                <span class="tech-tag">ROC/AUC</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="supervised">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/SuperVised_FINAL" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Indian Economy Analysis -->
+          <article class="glass-card project-card" data-category="analytics">
+            <div class="project-img-wrapper">
+              <img src="assets/project_economy.jpg" alt="Indian Economy Macro Dashboard" class="project-img" loading="lazy">
+              <div class="project-badge">Econometrics</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Indian Economy Macroeconomic Analysis</h3>
+              <p class="project-card-desc">
+                Conducted multi-year longitudinal statistical analysis of Indian economic indicators: GDP growth rates, CPI inflation, unemployment trends, fiscal deficit, and sectoral GDP contributions (GVA) using Python and Excel.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Descriptive Statistics</span>
+                <span class="tech-tag">Economic Indicators</span>
+                <span class="tech-tag">Matplotlib</span>
+                <span class="tech-tag">Excel</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="economy">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/Indian_Economy_Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Sales Analysis Power BI Dashboard -->
+          <article class="glass-card project-card" data-category="bi">
+            <div class="project-img-wrapper">
+              <img src="assets/project_powerbi.jpg" alt="Sales Performance Power BI Dashboard" class="project-img" loading="lazy">
+              <div class="project-badge">Power BI</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Executive Sales Analytics & KPI Dashboard</h3>
+              <p class="project-card-desc">
+                Architected an interactive business intelligence suite in Power BI featuring revenue trend decomposition, regional sales performance heatmaps, customer acquisition tracking, and product profitability drill-downs.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">DAX Measures</span>
+                <span class="tech-tag">Data Modeling</span>
+                <span class="tech-tag">KPI Tracking</span>
+                <span class="tech-tag">Sales Intelligence</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="salesbi">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/PR3_Sales_PowerBI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: SQL Business Case Study -->
+          <article class="glass-card project-card" data-category="analytics">
+            <div class="project-img-wrapper">
+              <div class="code-preview-banner">
+                <span class="code-badge">SQL Query Analytics</span>
+                <code>SELECT customer_segment, AVG(revenue), COUNT(*) FROM orders GROUP BY customer_segment;</code>
+              </div>
+              <div class="project-badge">SQL Intelligence</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Business Case Study & Advanced SQL Analytics</h3>
+              <p class="project-card-desc">
+                Executed complex relational queries, multi-table joins, subqueries, and window functions to answer critical executive business questions, compute cohort retention, and derive decision-driving KPIs.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Relational DB</span>
+                <span class="tech-tag">KPI Derivation</span>
+                <span class="tech-tag">Business Analysis</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="sqlstudy">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/sqlfinalproject" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Student Performance Power BI Dashboard -->
+          <article class="glass-card project-card" data-category="bi">
+            <div class="project-img-wrapper">
+              <div class="code-preview-banner banner-bi">
+                <span class="code-badge">Education Analytics</span>
+                <code>Student Academic Metrics • Attendance Correlation • Performance Quartiles</code>
+              </div>
+              <div class="project-badge">Student BI</div>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">Student Academic Analytics Dashboard</h3>
+              <p class="project-card-desc">
+                Interactive Power BI reporting system visualizing academic performance, test outcome distributions, student engagement metrics, and cohort comparison for educational decision-making.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">DAX</span>
+                <span class="tech-tag">Cohort Analysis</span>
+                <span class="tech-tag">Data Cleaning</span>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary project-modal-trigger" data-project-id="studentbi">
+                  <span>Deep Dive</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                </button>
+                <a href="https://github.com/Mant-0957/Student_PR_POWERBI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-glass">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- View All Repositories Banner -->
+        <div class="glass-card github-banner">
+          <div class="github-banner-content">
+            <div class="github-icon-large">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <h3>Explore 45+ More Repositories on GitHub</h3>
+              <p>Including Deep Learning projects (PR1_DL), Health & Diabetes Data Cleaning, IPL Analytics, and Mathematics notebooks.</p>
+            </div>
+          </div>
+          <a href="https://github.com/Mant-0957?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <span>Explore All on GitHub</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ML PLAYGROUND: K-MEANS SIMULATOR -->
+    <section class="section playground-section" id="playground">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Live Demonstration</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">K-Means Customer Clustering</span></h2>
+          <p class="section-subtitle">Demonstrating unsupervised machine learning principles right in your browser. Add data points or generate retail cohorts, choose K clusters, and watch centroids converge.</p>
+        </div>
+
+        <div class="glass-card playground-card">
+          <div class="playground-controls">
+            <div class="control-group">
+              <label for="k-select">Clusters (K):</label>
+              <select id="k-select" class="control-select">
+                <option value="2">K = 2 (Binary Segment)</option>
+                <option value="3" selected>K = 3 (Low / Mid / High Value)</option>
+                <option value="4">K = 4 (Champions, Loyal, At-Risk, Hibernating)</option>
+                <option value="5">K = 5 (Granular RFM)</option>
+              </select>
+            </div>
+
+            <div class="btn-group">
+              <button id="btn-generate-points" class="btn btn-sm btn-glass">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                <span>Generate Cohort</span>
+              </button>
+              <button id="btn-step-cluster" class="btn btn-sm btn-glass">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Step Clustering</span>
+              </button>
+              <button id="btn-run-cluster" class="btn btn-sm btn-primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span>Auto-Converge</span>
+              </button>
+              <button id="btn-clear-canvas" class="btn btn-sm btn-glass">Clear</button>
+            </div>
+          </div>
+
+          <!-- Canvas container -->
+          <div class="canvas-wrapper">
+            <div class="canvas-axis y-axis">Monetary Spend ($) ➔</div>
+            <canvas id="kmeansCanvas" width="760" height="380" aria-label="K-Means Cluster Canvas"></canvas>
+            <div class="canvas-axis x-axis">Purchase Frequency & Recency Index ➔</div>
+          </div>
+
+          <div class="playground-status-bar">
+            <div class="status-item">
+              <span class="status-label">Data Points:</span>
+              <span class="status-value" id="point-count">120 points</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">Iterations:</span>
+              <span class="status-value" id="iteration-count">0</span>
+            </div>
+            <div class="status-item">
+              <span class="status-label">State:</span>
+              <span class="status-value highlight" id="cluster-status">Ready</span>
+            </div>
+            <div class="status-hint">
+              💡 <em>Click anywhere inside the canvas to add custom customer data points!</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & LEADERSHIP JOURNEY -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Background & Growth</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Leadership</span></h2>
+          <p class="section-subtitle">Academic foundations, distinction records, and community impact.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">2025 – 2029 (Present)</div>
+              <h3 class="timeline-title">B. Tech in Computer Science Engineering</h3>
+              <h4 class="timeline-institution">Gandhinagar University, Gandhinagar, Gujarat</h4>
+              <p class="timeline-desc">
+                Specializing in Computer Science with a tailored focus on Data Structures, Algorithms, Machine Learning, Database Management Systems, and Artificial Intelligence. Leading peer study initiatives in Machine Learning workflows.
+              </p>
+              <div class="timeline-badges">
+                <span class="timeline-tag">Data Science</span>
+                <span class="timeline-tag">Algorithms</span>
+                <span class="timeline-tag">DBMS & SQL</span>
+                <span class="timeline-tag">AI / ML</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">2024 – 2025</div>
+              <h3 class="timeline-title">Higher Secondary School Certificate (Class XII)</h3>
+              <h4 class="timeline-institution">S.S. Agrawal Public School, Navsari, Gujarat</h4>
+              <p class="timeline-desc">
+                Graduated with <strong>81.1%</strong> in Science stream. Developed a deep passion for advanced mathematics, physics, and computational problem-solving.
+              </p>
+              <div class="timeline-badges">
+                <span class="timeline-tag">Distinction: 81.1%</span>
+                <span class="timeline-tag">Mathematics</span>
+                <span class="timeline-tag">Physics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-date">2022 – 2023</div>
+              <h3 class="timeline-title">Secondary School Certificate (Class X)</h3>
+              <h4 class="timeline-institution">Krishna School, Morbi, Gujarat</h4>
+              <p class="timeline-desc">
+                Achieved top academic distinction with <strong>94.16%</strong>, excelling in quantitative disciplines, science, and extracurricular debate competitions.
+              </p>
+              <div class="timeline-badges">
+                <span class="timeline-tag">High Distinction: 94.16%</span>
+                <span class="timeline-tag">Top Tier Honor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Leadership -->
+          <div class="timeline-item leadership-highlight">
+            <div class="timeline-dot dot-gold"></div>
+            <div class="glass-card timeline-card card-gold">
+              <div class="timeline-date">Leadership & Social Impact</div>
+              <h3 class="timeline-title">Group Leader — Village Outreach Initiative</h3>
+              <h4 class="timeline-institution">Ahmedabad, Gujarat</h4>
+              <p class="timeline-desc">
+                Led and coordinated multi-member student team activities engaging underprivileged children in rural communities. Delivered motivational seminars, interactive educational workshops, and applied public speaking, empathy, and organizational coordination.
+              </p>
+              <div class="timeline-badges">
+                <span class="timeline-tag tag-gold">Team Leadership</span>
+                <span class="timeline-tag tag-gold">Public Speaking</span>
+                <span class="timeline-tag tag-gold">Mentorship</span>
+                <span class="timeline-tag tag-gold">Social Impact</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section class="section resume-section" id="resume">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Curriculum Vitae</span>
+          <h2 class="section-title">Official <span class="gradient-text">Resume & Dossier</span></h2>
+          <p class="section-subtitle">Quick overview of professional summary, technical stack, and verified accomplishments.</p>
+        </div>
+
+        <div class="glass-card resume-container-card">
+          <div class="resume-header-row">
+            <div>
+              <h3 class="resume-candidate-name">MANT SHERASIYA</h3>
+              <p class="resume-candidate-subtitle">B.Tech Computer Science Engineering Student & Aspiring Data Scientist</p>
+              <p class="resume-contact-inline">
+                <span>📍 Ahmedabad, Gujarat, India</span> • 
+                <span>📞 +91 7016550632</span> • 
+                <span>✉️ mantsherasiya05@gmail.com</span> • 
+                <span>🔗 github.com/Mant-0957</span>
+              </p>
+            </div>
+            <div class="resume-actions-group">
+              <button id="btn-print-resume" class="btn btn-primary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                <span>Print / Save PDF</span>
+              </button>
+              <button id="btn-copy-resume" class="btn btn-glass btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Summary</span>
+              </button>
+            </div>
+          </div>
+
+          <hr class="resume-divider">
+
+          <div class="resume-content-layout">
+            <div class="resume-col main-col">
+              <section class="resume-block">
+                <h4 class="resume-block-title">Professional Summary</h4>
+                <p>
+                  B. Tech Computer Science Engineering student and aspiring Data Scientist with hands-on project experience in machine learning, unsupervised learning, data analysis, SQL, Power BI, Excel, and statistical analysis. Building skills in Generative AI, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG). Experienced in transforming structured datasets into actionable insights using Python, visualization, clustering, predictive modelling, dashboards, and quantitative methods.
+                </p>
+              </section>
+
+              <section class="resume-block">
+                <h4 class="resume-block-title">Key Projects</h4>
+                <div class="resume-project-item">
+                  <div class="item-head">
+                    <strong>Customer Segmentation using Unsupervised Learning</strong>
+                    <a href="https://github.com/Mant-0957/UnSuperVised_FINAL" target="_blank" class="resume-link">GitHub Link ↗</a>
+                  </div>
+                  <p>Built end-to-end segmentation workflow on Online Retail II data using RFM features. Compared K-Means, Agglomerative Clustering, and DBSCAN; evaluated cluster quality.</p>
+                  <span class="resume-tech">Python, Pandas, Scikit-learn, RFM, K-Means, Agglomerative, DBSCAN</span>
+                </div>
+
+                <div class="resume-project-item">
+                  <div class="item-head">
+                    <strong>Supervised Machine Learning Project</strong>
+                    <a href="https://github.com/Mant-0957/SuperVised_FINAL" target="_blank" class="resume-link">GitHub Link ↗</a>
+                  </div>
+                  <p>Developed supervised workflow covering preprocessing, model training, evaluation, and interpretation in reproducible Jupyter Notebooks.</p>
+                  <span class="resume-tech">Python, Pandas, Scikit-learn, Supervised Learning, Model Evaluation</span>
+                </div>
+
+                <div class="resume-project-item">
+                  <div class="item-head">
+                    <strong>Indian Economy Analysis</strong>
+                    <a href="https://github.com/Mant-0957/Indian_Economy_Analysis" target="_blank" class="resume-link">GitHub Link ↗</a>
+                  </div>
+                  <p>Analyzed multi-year Indian economic indicators: GDP growth, inflation, unemployment, fiscal deficit, and sector contribution.</p>
+                  <span class="resume-tech">Python, Excel, Statistics, Data Analysis, Visualization</span>
+                </div>
+
+                <div class="resume-project-item">
+                  <div class="item-head">
+                    <strong>Sales Analysis & Power BI Dashboards</strong>
+                    <a href="https://github.com/Mant-0957/PR3_Sales_PowerBI" target="_blank" class="resume-link">GitHub Link ↗</a>
+                  </div>
+                  <p>Interactive Power BI sales analysis projects focused on KPI tracking, trend analysis, and business performance visualization.</p>
+                  <span class="resume-tech">Power BI, Data Visualization, Dashboarding, Sales Analytics</span>
+                </div>
+              </section>
+            </div>
+
+            <div class="resume-col side-col">
+              <section class="resume-block">
+                <h4 class="resume-block-title">Education</h4>
+                <p><strong>Gandhinagar University</strong><br>B. Tech CSE | 2025–2029</p>
+                <p><strong>S.S. Agrawal Public School</strong><br>Class XII — 81.1% | 2024–2025</p>
+                <p><strong>Krishna School, Morbi</strong><br>Class X — 94.16% | 2022–2023</p>
+              </section>
+
+              <section class="resume-block">
+                <h4 class="resume-block-title">Technical Skills</h4>
+                <p><strong>Languages & Data:</strong> Python, SQL, C++, OOP, Pandas, NumPy</p>
+                <p><strong>ML & AI:</strong> Supervised & Unsupervised Learning, Scikit-learn, GenAI, LLMs, RAG</p>
+                <p><strong>BI & Analytics:</strong> Power BI, Advanced Excel, Pivot Tables, Dashboards, EDA</p>
+                <p><strong>Math & Stats:</strong> Linear Algebra, Probability, Statistics, Calculus</p>
+                <p><strong>Tools:</strong> Git, GitHub, Jupyter, Colab, Matplotlib, Seaborn, Pickle</p>
+              </section>
+
+              <section class="resume-block">
+                <h4 class="resume-block-title">Languages & Interests</h4>
+                <p>English, Hindi, Gujarati</p>
+                <p><em>Interests:</em> Public Speaking, Reading, Data Analysis & Visualization, Continuous Learning</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Discuss <span class="gradient-text">Opportunities</span></h2>
+          <p class="section-subtitle">Open for Data Science internships, collaborative ML projects, or tech discussions.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-col">
+            <div class="glass-card contact-card">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:mantsherasiya05@gmail.com" class="contact-val">mantsherasiya05@gmail.com</a>
+              </div>
+              <button class="btn btn-icon btn-sm btn-glass copy-btn" data-copy="mantsherasiya05@gmail.com" title="Copy Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <div class="glass-card contact-card">
+              <div class="contact-icon">📱</div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <a href="tel:+917016550632" class="contact-val">+91 7016550632</a>
+              </div>
+              <button class="btn btn-icon btn-sm btn-glass copy-btn" data-copy="7016550632" title="Copy Phone Number">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <div class="glass-card contact-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-val">Ahmedabad, Gujarat, India</span>
+              </div>
+            </div>
+
+            <div class="glass-card contact-card">
+              <div class="contact-icon">💻</div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/Mant-0957" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/Mant-0957</a>
+              </div>
+              <a href="https://github.com/Mant-0957" target="_blank" rel="noopener noreferrer" class="btn btn-icon btn-sm btn-glass" title="Visit GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Direct Contact Form -->
+          <div class="contact-form-col">
+            <div class="glass-card form-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contact-email">Your Email</label>
+                    <input type="email" id="contact-email" class="form-input" placeholder="e.g. sarah@example.com" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject</label>
+                  <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Data Science Opportunity / Project Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Hello Mant, I reviewed your Machine Learning and BI projects and would love to connect regarding..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;MS /&gt;</span>
+          <span class="logo-text">Mant<span class="accent-text">.ai</span></span>
+        </a>
+        <p class="footer-tagline">Crafted with precision, data-driven passion, and modern web standards.</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="footer-pill">
+          <span class="pulse-ring"></span>
+          <span>Open to Data Science & ML Opportunities</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">&copy; 2026 Mant Sherasiya. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <dialog id="project-modal" class="project-modal">
+    <div class="modal-card glass-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-category" id="modal-category">Project Category</span>
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image-wrap">
+          <img id="modal-img" src="" alt="Project Preview" class="modal-img">
+        </div>
+
+        <div class="modal-section">
+          <h4>Business Objective & Problem Statement</h4>
+          <p id="modal-problem"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Architecture & Methodology</h4>
+          <p id="modal-methodology"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Key Results & Quantitative Metrics</h4>
+          <ul id="modal-results" class="modal-list"></ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies & Packages Used</h4>
+          <div id="modal-tech-stack" class="project-tags"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>View Source on GitHub</span>
+        </a>
+        <button id="modal-dismiss-btn" class="btn btn-glass">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
